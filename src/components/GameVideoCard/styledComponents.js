@@ -16,7 +16,7 @@ export const GamingListItem = styled.li`
   }
 `
 export const GamingThumbNailImage = styled.img`
-  width: 100vw;
+  width: 50vw;
   height: 300px;
   align-self: center;
   @media screen and(min-width:768px) {
@@ -31,6 +31,13 @@ export const GamingContentSection = styled.div`
   padding: 8px;
 `
 export const GamingTitle = styled.p`
+  font-family: 'Roboto';
+  font-size: 12px;
+  color: ${props => props.color};
+  margin-bottom: 0px;
+`
+
+export const GamingViewAndDate = styled.p`
   font-family: 'Roboto';
   font-size: 12px;
   color: ${props => props.color};

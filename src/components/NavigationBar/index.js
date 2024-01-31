@@ -1,5 +1,5 @@
 import {Component} from 'react'
-import {AiFilHome} from 'react-icons/ai'
+import {AiFillHome} from 'react-icons/ai'
 import {HiFire} from 'react-icons/hi'
 import {SiYoutubegaming} from 'react-icons/si'
 import {CgPlayListAdd} from 'react-icons/cg'
@@ -53,7 +53,7 @@ class NavigationBar extends Component {
                     bgColor={activeTab === 'Home' ? activeTabBg : 'none'}
                     onClick={onClickTabHome}
                   >
-                    <AiFilHome
+                    <AiFillHome
                       size={30}
                       color={activeTab === 'home' ? '#ff0b37' : '#909090'}
                     />
@@ -126,7 +126,7 @@ class NavigationBar extends Component {
             </NavigationLgContainer>
             <NavigationSmallContainer bgColor={bgColor}>
               <NavLink to="/">
-                <AiFilHome
+                <AiFillHome
                   size={30}
                   onClick={onClickTabHome}
                   color={activeTab === 'Home' ? '#ff0b37' : '#909090'}

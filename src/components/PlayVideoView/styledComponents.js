@@ -27,7 +27,7 @@ export const PlayVideoDot = styled.span`
   padding-left: 5px;
   padding-right: 5px;
 `
-export const PlaySocialButtonContainer = styled.div`
+export const PlaySocialButtonsContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -83,7 +83,7 @@ export const ChannelDescription = styled.p`
   font-size: 15px;
   color: ${props => props.color};
 `
-export const btnContainer = styled.div`
+export const BtnContainer = styled.div`
   display: flex;
   background: none;
 `

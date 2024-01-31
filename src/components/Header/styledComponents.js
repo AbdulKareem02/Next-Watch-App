@@ -135,6 +135,6 @@ export const ButtonsContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
 `
-export const LogoutLink = styled(Link)`
+export const LogoLink = styled(Link)`
   text-decoration: none;
 `

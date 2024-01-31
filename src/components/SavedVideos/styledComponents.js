@@ -36,7 +36,7 @@ export const SavedText = styled.h1`
     font-size: 35px;
   }
 `
-export const SavedVideosList = styled.ul`
+export const SavedVideoList = styled.ul`
   list-style-type: none;
   display: flex;
   flex-direction: column;

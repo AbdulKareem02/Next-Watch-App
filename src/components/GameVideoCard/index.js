@@ -1,4 +1,4 @@
-import ThemeAndVideoContext from './context/ThemeAndVideoContent'
+import ThemeAndVideoContext from '../../context/ThemeAndVideoContext'
 
 import {
   ItemLink,
@@ -8,7 +8,6 @@ import {
   GamingTitle,
   GamingViewAndDate,
 } from './styledComponents'
-import {className} from 'postcss-selector-parser'
 
 const VideoCard = props => {
   const {videoDetails} = props
@@ -22,13 +21,15 @@ const VideoCard = props => {
 
         return (
           <ItemLink to={`/videos/${id}`} className="link">
-            <GamingThumbNailImage src={thumbnailUrl} alt="video thumbnail" />
-            <GamingContentSection>
-              <GamingTitle color={textColor}> {title}</GamingTitle>
-              <GamingViewAndDate color={textColor}>
-                {viewCount} Watching Worldwide
-              </GamingViewAndDate>
-            </GamingContentSection>
+            <GamingListItem>
+              <GamingThumbNailImage src={thumbnailUrl} alt="video thumbnail" />
+              <GamingContentSection>
+                <GamingTitle color={textColor}> {title}</GamingTitle>
+                <GamingViewAndDate color={textColor}>
+                  {viewCount} Watching Worldwide
+                </GamingViewAndDate>
+              </GamingContentSection>
+            </GamingListItem>
           </ItemLink>
         )
       }}

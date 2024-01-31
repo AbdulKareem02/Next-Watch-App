@@ -5,7 +5,7 @@ import Popup from 'reactjs-popup'
 import {BsMoon, BsBrightnessHigh} from 'react-icons/bs'
 import {FiLogOut} from 'react-icons/fi'
 
-import ThemeAndVideosContext from '../../context/ThemeAndVideoContext'
+import ThemeAndVideoContext from '../../context/ThemeAndVideoContext'
 
 import {
   LogoLink,
@@ -24,7 +24,7 @@ import {
 } from './styledComponents'
 
 const Header = props => (
-  <ThemeAndVideosContext.Consumer>
+  <ThemeAndVideoContext.Consumer>
     {value => {
       const {isDarkTheme, toggleTheme} = value
       const color = isDarkTheme ? '#ffffff' : '#00306e'
@@ -126,7 +126,7 @@ const Header = props => (
         </NavbarHeader>
       )
     }}
-  </ThemeAndVideosContext.Consumer>
+  </ThemeAndVideoContext.Consumer>
 )
 
 export default withRouter(Header)

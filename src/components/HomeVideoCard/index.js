@@ -21,11 +21,11 @@ const HomeVideoCard = props => {
   const {
     id,
     title,
-    thumbnailUlr,
+    thumbnailUrl,
     viewCount,
     publishedAt,
     name,
-    ProfileImageUrl,
+    profileImageUrl,
   } = video
 
   return (
@@ -37,9 +37,9 @@ const HomeVideoCard = props => {
         return (
           <Link to={`/videos/${id}`} className="link">
             <ListItem>
-              <ThumbNailImage src={thumbnailUlr} alt="video thumbnail" />
+              <ThumbNailImage src={thumbnailUrl} alt="video thumbnail" />
               <VideoDetails>
-                <ProfileImage src={ProfileImage} alt="channel logo" />
+                <ProfileImage src={profileImageUrl} alt="channel logo" />
                 <ContentSection>
                   <Title color={textColor}> {title}</Title>
                   <ChannelName color={textColor}>{name}</ChannelName>

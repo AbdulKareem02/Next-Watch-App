@@ -14,7 +14,7 @@ import {
   TrendingContainer,
   TitleIconContainer,
   TrendingVideoTitle,
-  TrendingVideosList,
+  TrendingVideoList,
   TrendingText,
   LoaderContainer,
 } from './styledComponents'
@@ -49,16 +49,17 @@ class TrendingVideos extends Component {
     const response = await fetch(url, options)
     if (response.ok) {
       const data = await response.json()
-      // console.log(data)
+
       const updatedData = data.videos.map(eachVideo => ({
         id: eachVideo.id,
         title: eachVideo.title,
-        thumbnailUrl: eachVideo.thumbnail_ulr,
+        thumbnailUrl: eachVideo.thumbnail_url,
         viewCount: eachVideo.view_count,
         publishedAt: eachVideo.published_at,
-        name: eachVideo.name,
-        profileImageUrl: eachVideo.profile_image_url,
+        name: eachVideo.channel.name,
+        profileImageUrl: eachVideo.channel.profile_image_url,
       }))
+
       this.setState({
         trendingVideos: updatedData,
         apiStatus: apiStatusConstants.success,
@@ -77,11 +78,11 @@ class TrendingVideos extends Component {
   renderVideosView = () => {
     const {trendingVideos} = this.state
     return (
-      <TrendingVideosList>
+      <TrendingVideoList>
         {trendingVideos.map(eachVideo => (
           <VideoCard key={eachVideo.id} videoDetails={eachVideo} />
         ))}
-      </TrendingVideosList>
+      </TrendingVideoList>
     )
   }
 

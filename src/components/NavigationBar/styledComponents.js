@@ -1,4 +1,4 @@
-import {link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 
 export const NavBar = styled.div`
@@ -27,7 +27,7 @@ export const NavOptions = styled.ul`
   padding: 0px;
   margin-top: 0px;
 `
-export const NavLink = styled(link)`
+export const NavLink = styled(Link)`
   text-decoration: none;
 `
 export const NavLinkContainer = styled.li`

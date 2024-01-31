@@ -55,7 +55,7 @@ export const BannerCloseButton = styled.button`
   height: 25px;
 `
 
-export const searchContainer = styled.div`
+export const SearchContainer = styled.div`
   display: flex;
   border: 1px solid #909090;
   border-radius: 3px;

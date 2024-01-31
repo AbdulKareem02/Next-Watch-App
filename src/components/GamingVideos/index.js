@@ -2,7 +2,7 @@ import {Component} from 'react'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 
-import {siYoutubegaming} from 'react-icons/si'
+import {SiYoutubegaming} from 'react-icons/si'
 
 import Header from '../Header'
 import NavigationBar from '../NavigationBar'
@@ -52,9 +52,10 @@ class GamingVideos extends Component {
       const updateData = data.videos.map(eachVideo => ({
         id: eachVideo.id,
         title: eachVideo.title,
-        thumbnailUlr: eachVideo.thumbnail_url,
+        thumbnailUrl: eachVideo.thumbnail_url,
         viewCount: eachVideo.view_count,
       }))
+      console.log(updateData)
       this.setState({
         gamingVideos: updateData,
         apiStatus: apiStatusConstants.success,
@@ -118,7 +119,7 @@ class GamingVideos extends Component {
               <GamingContainer data-testid="gaming" bgColor={bgColor}>
                 <GamingVideoTitle>
                   <GamingTitleIconContainer>
-                    <siYoutubegaming size={35} color="#ff0000" />
+                    <SiYoutubegaming size={35} color="#ff0000" />
                   </GamingTitleIconContainer>
                   <GamingText color={textColor}>Gaming</GamingText>
                 </GamingVideoTitle>

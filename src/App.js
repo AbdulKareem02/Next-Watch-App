@@ -3,7 +3,7 @@ import {Route, Switch, Redirect} from 'react-router-dom'
 import ProtectedRoute from './components/ProtectedRoute'
 import LoginForm from './components/LoginForm'
 import Home from './components/Home'
-import VideoDetailView from './components/VideoDetailsView'
+import VideoDetailView from './components/VideoDetailView'
 import TrendingVideos from './components/TrendingVideos'
 import GamingVideos from './components/GamingVideos'
 import SavedVideos from './components/SavedVideos'
@@ -59,7 +59,7 @@ class App extends Component {
           isDarkTheme,
           activeTab,
           toggleTheme: this.toggleTheme,
-          addingVideo: this.addVideo,
+          addVideo: this.addVideo,
           changeTab: this.changeTab,
         }}
       >

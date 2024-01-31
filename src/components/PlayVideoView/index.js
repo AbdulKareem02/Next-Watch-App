@@ -25,14 +25,14 @@ import {
 } from './styledComponents'
 
 const PlayVideoView = props => {
-  const {videoDetails, isLiked, isDisLiked, clickLiked, clickDisLiked} = props
+  const {videoDetails, isLiked, isDisLiked, clickLiked, clickDisLike} = props
 
   const onClickLike = () => {
     clickLiked()
   }
 
   const onClickDisLike = () => {
-    clickDisLiked()
+    clickDisLike()
   }
 
   return (
@@ -54,6 +54,7 @@ const PlayVideoView = props => {
 
         const onClickSave = () => {
           addVideo(videoDetails)
+          console.log('video saved clicked')
         }
 
         return (
@@ -93,7 +94,7 @@ const PlayVideoView = props => {
                   <SocialButton
                     type="button"
                     color={saveIconColor}
-                    conClick={onClickSave}
+                    onClick={onClickSave}
                   >
                     <BiListPlus size={25} />
                     <ButtonText>{isSaved ? 'Saved' : 'Save'}</ButtonText>

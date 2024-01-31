@@ -36,7 +36,7 @@ export const GamingText = styled.h1`
     font-size: 35px;
   }
 `
-export const GamingVideosList = styled.ul`
+export const GamingVideoList = styled.ul`
   list-style-type: none;
   display: flex;
   flex-direction: row;

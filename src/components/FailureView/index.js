@@ -6,7 +6,7 @@ import {
   RetryButton,
 } from './styledComponents'
 
-import ThemeAndVideoContext from './context/ThemeAndVideoContent'
+import ThemeAndVideoContext from '../../context/ThemeAndVideoContext'
 
 const FailureView = props => {
   const {onRetry} = props

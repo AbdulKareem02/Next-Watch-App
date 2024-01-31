@@ -4,7 +4,7 @@ import {Redirect} from 'react-router-dom'
 
 import {
   AppContainer,
-  FromContainer,
+  FormContainer,
   LoginLogo,
   InputContainer,
   LoginButton,
@@ -26,7 +26,11 @@ class LoginForm extends Component {
   }
 
   onChangeHandler = event => {
-    this.setState({[event.target.name]: event.target.value})
+    this.setState({username: event.target.value})
+  }
+
+  onChangePassword = event => {
+    this.setState({password: event.target.value})
   }
 
   onShowPassword = () => {
@@ -35,7 +39,6 @@ class LoginForm extends Component {
 
   onSubmitSuccess = jwtToken => {
     const {history} = this.props
-
     Cookies.set('jwt_token', jwtToken, {
       expires: 30,
       path: '/',
@@ -57,7 +60,7 @@ class LoginForm extends Component {
       body: JSON.stringify(userDetails),
     }
     const response = await fetch(url, options)
-    const data = response.json()
+    const data = await response.json()
     if (response.ok) {
       this.onSubmitSuccess(data.jwt_token)
     } else {
@@ -92,7 +95,7 @@ class LoginForm extends Component {
           id="password"
           value={password}
           name="password"
-          onChange={this.onChangeHandler}
+          onChange={this.onChangePassword}
           placeholder="password"
         />
         <CheckboxContainer>
@@ -115,7 +118,7 @@ class LoginForm extends Component {
     }
     return (
       <AppContainer>
-        <FromContainer onSubmit={this.submitForm}>
+        <FormContainer onSubmit={this.submitForm}>
           <LoginLogo
             src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
             alt="website logo"
@@ -123,8 +126,8 @@ class LoginForm extends Component {
           <InputContainer>{this.renderUsernameField()}</InputContainer>
           <InputContainer>{this.renderPasswordField()}</InputContainer>
           <LoginButton type="submit">Login</LoginButton>
-          {showSubmitError && <SubmitError>8{errorMsg}</SubmitError>}
-        </FromContainer>
+          {showSubmitError && <SubmitError>{errorMsg}</SubmitError>}
+        </FormContainer>
       </AppContainer>
     )
   }

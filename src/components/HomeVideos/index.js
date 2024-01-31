@@ -12,6 +12,7 @@ import HomeVideoCard from '../HomeVideoCard'
 
 const HomeVideos = props => {
   const {homeVideos, onRetry} = props
+
   const videosCount = homeVideos.length
 
   const onClickRetry = () => {

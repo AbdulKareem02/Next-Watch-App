@@ -10,7 +10,7 @@ import {
   TrendingTitle,
   TrendingChannelName,
   TrendingViewsAndDate,
-  TrendingDOt,
+  TrendingDot,
 } from './styledComponents'
 
 const VideoCard = props => {
@@ -18,7 +18,7 @@ const VideoCard = props => {
   const {
     id,
     title,
-    thumbnailUlr,
+    thumbnailUrl,
     viewCount,
     publishedAt,
     name,
@@ -35,7 +35,7 @@ const VideoCard = props => {
           <ItemLink to={`/videos/${id}`} className="link">
             <TrendingListItem>
               <TrendingThumbNailImage
-                src={thumbnailUlr}
+                src={thumbnailUrl}
                 alt="video thumbnail"
               />
               <TrendingVideoDetails>
@@ -49,7 +49,7 @@ const VideoCard = props => {
                     {name}
                   </TrendingChannelName>
                   <TrendingViewsAndDate color={textColor}>
-                    {viewCount} views<TrendingDOt>&#8226;</TrendingDOt>
+                    {viewCount} views<TrendingDot>&#8226;</TrendingDot>
                     {publishedAt}
                   </TrendingViewsAndDate>
                 </TrendingContentSection>
